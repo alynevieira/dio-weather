@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BookmarksPage } from './pages/bookmarks/bookmarks.page';
-import { HomePage } from './pages/home/home.page';
+import { HomePage } from './pages/home/container/home/home.page';
 
 const routes: Routes = [
   { path: '', component: HomePage },
