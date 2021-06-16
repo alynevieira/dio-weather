@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  overflow-x: hidden;
+
+  background-color: #f7f8fa;
+}
+
+.navbar--icon {
+	width: 20px;
+	height: 20px;
+
+	color: #FFFFFF;
+}

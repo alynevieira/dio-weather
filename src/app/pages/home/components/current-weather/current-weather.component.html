@@ -1,1 +1,24 @@
-<p>current-weather works!</p>
+<div class="card" style="width: 60%;">
+  <div class="card-body">
+    <div class="app-inline">
+      <div>
+        <h3 class="card-title mb-0">
+          <svg class="navbar--icon" viewBox="0 0 20 20">
+            <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
+          </svg>
+          {{ cityWeather.city.name }} - {{ cityWeather.city.country }} 
+        </h3>
+        <small style="padding-left: 1.8rem;">{{ dateNow | date: 'mediumDate' }}</small>
+      </div>
+
+      <a class="navbar--link" (click)="onToogleBookmark()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon-star" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+          <polygon fill="#f1db22" stroke="#f1db22" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="  259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08   29.274,197.007 188.165,173.919 "/>
+        </svg>
+      </a>
+    </div>   
+
+    <app-detailed-weather [weather]="cityWeather.weather"></app-detailed-weather>
+  </div>
+
+</div>
