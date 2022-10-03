@@ -8,13 +8,11 @@ import { EffectsModule } from '@ngrx/effects';
 import { HomePage } from './container/home/home.page';
 import { homeReducer } from './state/home.reducer';
 import { HomeEffects } from './state/home.effects';
-import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
 
 @NgModule({
   declarations: [
     HomePage,
-    CurrentWeatherComponent,
   ],
   imports: [
     CommonModule,

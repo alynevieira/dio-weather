@@ -1,4 +1,4 @@
-<div class="row">
+<main class="wrapper">
   <aside class="aside-bar col-lg-1">
     <a href="../index.html">
       <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -71,6 +71,11 @@
           </a>
         </li>
         <li>
+          <a class="navbar--link " routerLink="/search-bookmark" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active--link">
+            Pesquisar
+          </a>
+        </li>
+        <li>
           <a class="navbar--link" routerLink="/bookmarks" [routerLinkActiveOptions]="{exact: true}"
             routerLinkActive="active--link">
             <svg xmlns="http://www.w3.org/2000/svg" class="navbar--icon" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -84,6 +89,7 @@
         </li>
       </ul>
     </nav>
+
     <div class="github">
       <a href="https://www.github.com/alynevieira" target="_blank">
         <svg viewBox="0 0 256 250" version="1.1" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +104,7 @@
     </div>
   </aside>
 
-  <div class="col-lg-11">
+  <div class="content">
     <router-outlet></router-outlet>
   </div>
-</div>
+</main>

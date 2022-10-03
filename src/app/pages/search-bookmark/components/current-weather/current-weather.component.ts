@@ -14,7 +14,7 @@ export class CurrentWeatherComponent {
   @Output() toggleBookmark = new EventEmitter();
   dateNow = new Date();
 
-  onToogleBookmark() {
+  onToggleBookmark() {
     this.toggleBookmark.emit();
   }
 }

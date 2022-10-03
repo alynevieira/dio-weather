@@ -38,24 +38,6 @@ export class HomePage implements OnInit, OnDestroy {
         .subscribe(cityWeather => this.cityWeather = cityWeather);
   }
 
-  search() {
-    const query = this.searchForm.value;
-
-    // vou inserir na store através dessa ação "changeText" o texto que foi digitado
-    this.store.dispatch(fromHomeActions.loadCurrentWeather({ query }));
-  }
-
-  onTooggleBookmark() {
-    const bookmark = new Bookmark();
-    
-    bookmark.id = this.cityWeather.city.id;
-    bookmark.name = this.cityWeather.city.name;
-    bookmark.country = this.cityWeather.city.country;
-    bookmark.coord = this.cityWeather.city.coord;
-
-    this.store.dispatch(fromHomeActions.toggleBookmark({ entity: bookmark }));
-  }
-
   ngOnDestroy() {
     this.subscription$.next();
     this.subscription$.unsubscribe();
